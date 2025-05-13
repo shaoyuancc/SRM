@@ -1,6 +1,6 @@
 defaults:
   - ms_hard
-  - /sampler@hard.samplers.seq_adaptive000: seq_adaptive
+  - /sampler@hard.samplers.sim_adaptive: sim_adaptive
 
 hard:
   # Override batch size to be smaller
@@ -8,5 +8,6 @@ hard:
   save_samples: true
   sampling_video: true
   samplers:
-    seq_adaptive000:
+    sim_adaptive:
       max_steps: 300
+      top_k: 1
